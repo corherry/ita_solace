@@ -1,0 +1,13 @@
+solace:
+  jms:
+    host: 192.168.99.100:55555
+    client-username: admin
+    client-password: admin
+    msg-vpn: default
+  queue:
+    test-queue: TO.DO.LIST.QUEUE
+  topic:
+    test-topic: TO.DO.LIST.TOPIC
+
+server:
+  port: 8848
