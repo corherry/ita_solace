@@ -1,3 +1,30 @@
+# Spring 数据源 (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  application:
+    name: logService
+#配置数据源：
+  datasource:
+#  数据源所使用的驱动
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ita_todolist?useSSL=false
+#    数据库用户名
+    username: root
+#    数据库密码
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect # Hibernate 属性，SQL 方言使得 Hibernate 为所选数据库生成更好的 SQL
+#        配置是否显示hibernate生成的sql语句
+        show_sql: true
+#        设置是否美化sql输出
+        format_sql: true
+#        设置是否为hibernate所生成的sql语句显示注释
+        use_sql_comments: true
+#        设置是否收集用于性能调试的数据
+        generate_statistics: false
+
+
 solace:
   jms:
     host: 192.168.99.100:55555
